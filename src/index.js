@@ -1,13 +1,13 @@
 // ESM => ESM
-import defaultA, { functionA, nameA } from "./a";
+import defaultA, { functionA, nameA } from "./a.mjs";
 // CJS => ESM
-const defaultB = require("./b.js");
-const { functionB, nameB } = require("./b.js");
+const defaultB = require("./b.mjs");
+const { functionB, nameB } = require("./b.mjs");
 // ESM =>  CJS
-import defaultC, { functionC, nameC } from "./c";
+import defaultC, { functionC, nameC } from "./c.cjs";
 // CJS => CJS
-const defaultD = require("./d.js");
-const { functionD, nameD } = require("./d.js");
+const defaultD = require("./d.cjs");
+const { functionD, nameD } = require("./d.cjs");
 
 console.log(nameA, defaultA);
 console.log(nameB, defaultB);

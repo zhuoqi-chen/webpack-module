@@ -1,11 +1,45 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/a.js":
-/*!******************!*\
-  !*** ./src/a.js ***!
-  \******************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "./src/c.cjs":
+/*!*******************!*\
+  !*** ./src/c.cjs ***!
+  \*******************/
+/***/ ((module) => {
+
+module.exports.nameC = "nameC";
+module.exports.functionC = function functionC(params) {
+  console.log("functionC");
+};
+module.exports = {
+  CDefaultKey: "defaultValue",
+};
+
+
+/***/ }),
+
+/***/ "./src/d.cjs":
+/*!*******************!*\
+  !*** ./src/d.cjs ***!
+  \*******************/
+/***/ ((module) => {
+
+module.exports.nameD = "nameD";
+module.exports.functionD = function functionD(params) {
+  console.log("functionD");
+};
+module.exports = {
+  DDefaultKey: "defaultValue",
+};
+
+
+/***/ }),
+
+/***/ "./src/a.mjs":
+/*!*******************!*\
+  !*** ./src/a.mjs ***!
+  \*******************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -26,11 +60,11 @@ function functionA(params) {
 
 /***/ }),
 
-/***/ "./src/b.js":
-/*!******************!*\
-  !*** ./src/b.js ***!
-  \******************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "./src/b.mjs":
+/*!*******************!*\
+  !*** ./src/b.mjs ***!
+  \*******************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -46,40 +80,6 @@ function functionB(params) {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   BDefaultKey: "defaultValue",
 });
-
-
-/***/ }),
-
-/***/ "./src/c.js":
-/*!******************!*\
-  !*** ./src/c.js ***!
-  \******************/
-/***/ ((module) => {
-
-module.exports.nameC = "nameC";
-module.exports.functionC = function functionC(params) {
-  console.log("functionC");
-};
-module.exports = {
-  CDefaultKey: "defaultValue",
-};
-
-
-/***/ }),
-
-/***/ "./src/d.js":
-/*!******************!*\
-  !*** ./src/d.js ***!
-  \******************/
-/***/ ((module) => {
-
-module.exports.nameD = "nameD";
-module.exports.functionD = function functionD(params) {
-  console.log("functionD");
-};
-module.exports = {
-  DDefaultKey: "defaultValue",
-};
 
 
 /***/ })
@@ -160,27 +160,27 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./a */ "./src/a.js");
-/* harmony import */ var _c__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./c */ "./src/c.js");
-/* harmony import */ var _c__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_c__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _a_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./a.mjs */ "./src/a.mjs");
+/* harmony import */ var _c_cjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./c.cjs */ "./src/c.cjs");
+/* harmony import */ var _c_cjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_c_cjs__WEBPACK_IMPORTED_MODULE_1__);
 // ESM => ESM
 
 // CJS => ESM
-const defaultB = __webpack_require__(/*! ./b.js */ "./src/b.js");
-const { functionB, nameB } = __webpack_require__(/*! ./b.js */ "./src/b.js");
+const defaultB = __webpack_require__(/*! ./b.mjs */ "./src/b.mjs");
+const { functionB, nameB } = __webpack_require__(/*! ./b.mjs */ "./src/b.mjs");
 // ESM =>  CJS
 
 // CJS => CJS
-const defaultD = __webpack_require__(/*! ./d.js */ "./src/d.js");
-const { functionD, nameD } = __webpack_require__(/*! ./d.js */ "./src/d.js");
+const defaultD = __webpack_require__(/*! ./d.cjs */ "./src/d.cjs");
+const { functionD, nameD } = __webpack_require__(/*! ./d.cjs */ "./src/d.cjs");
 
-console.log(_a__WEBPACK_IMPORTED_MODULE_0__.nameA, _a__WEBPACK_IMPORTED_MODULE_0__["default"]);
+console.log(_a_mjs__WEBPACK_IMPORTED_MODULE_0__.nameA, _a_mjs__WEBPACK_IMPORTED_MODULE_0__["default"]);
 console.log(nameB, defaultB);
-console.log(_c__WEBPACK_IMPORTED_MODULE_1__.nameC, (_c__WEBPACK_IMPORTED_MODULE_1___default()));
+console.log(_c_cjs__WEBPACK_IMPORTED_MODULE_1__.nameC, (_c_cjs__WEBPACK_IMPORTED_MODULE_1___default()));
 console.log(nameD, defaultD);
-(0,_a__WEBPACK_IMPORTED_MODULE_0__.functionA)("A");
+(0,_a_mjs__WEBPACK_IMPORTED_MODULE_0__.functionA)("A");
 functionB("B");
-(0,_c__WEBPACK_IMPORTED_MODULE_1__.functionC)("C");
+(0,_c_cjs__WEBPACK_IMPORTED_MODULE_1__.functionC)("C");
 functionD("C");
 
 })();
